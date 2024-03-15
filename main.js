@@ -51,4 +51,13 @@ function movetoleft(){
     sliders.style.transform = `translate(-${operation}%)`;
     sliders.style.transition = "all ease .6s";
    
-}
+};
+
+window.addEventListener("DOMContentLoaded",function(){
+    if(window.innerWidth < 550){
+        let elementos = document.querySelectorAll(".flist");
+        elementos.forEach(function(elemento){
+            elemento.parentNode.removeChild(elemento);
+        });
+    }
+});
